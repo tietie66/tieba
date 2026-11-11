@@ -276,6 +276,21 @@
       document.getElementById('themeBtn').textContent = '🌙';
     }
   </script>
+<!-- 访问统计（只有自己能看见） -->
+<div id="stats" style="display:none; text-align:center; padding:16px; font-size:13px; color:#666;">
+  本站总访问量 <span id="busuanzi_value_site_pv">--</span> 次
+  &nbsp;|&nbsp;
+  今日访问 <span id="busuanzi_value_site_uv">--</span> 人
+</div>
 
+<!-- 不蒜子统计脚本 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+<script>
+  // 只有网址带 ?me=1 才显示统计
+  if (window.location.search.includes('me=1')) {
+    document.getElementById('stats').style.display = 'block';
+  }
+</script>
 </body>
 </html>
